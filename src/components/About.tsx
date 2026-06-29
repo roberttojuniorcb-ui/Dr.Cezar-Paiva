@@ -35,8 +35,8 @@ export default function About() {
           
           {/* Left Column: Portrait */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="lg:col-span-5 relative animate-float"
@@ -55,7 +55,13 @@ export default function About() {
           </motion.div>
 
           {/* Right Column: Bio Details */}
-          <div className="lg:col-span-7 space-y-8 text-left">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="lg:col-span-7 space-y-8 text-left"
+          >
             <div className="space-y-4">
               <span className="text-sky-400 font-bold tracking-widest text-xs uppercase bg-sky-400/10 border border-sky-400/20 px-3.5 py-1.5 rounded-full">
                 Quem é o Especialista?
@@ -159,7 +165,7 @@ export default function About() {
               </div>
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 

@@ -9,7 +9,7 @@ export default function Testimonials() {
       id: 'review-1',
       name: 'Maria do Socorro Nogueira',
       location: 'Centro, Capitão Poço',
-      role: 'Aposentada',
+      role: '',
       rating: 5,
       comment: 'Fazer o implante protocolo com o Dr. Cezar mudou minha vida! Eu usava dentadura há 15 anos e tinha vergonha de sorrir e dificuldade para comer. Hoje me sinto segura, como de tudo e meu sorriso ficou muito natural. Recomendo de olhos fechados!',
       date: 'Maio, 2026',
@@ -45,7 +45,13 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-20">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto space-y-4 mb-20"
+        >
           <span className="text-sky-400 font-bold tracking-widest text-xs uppercase bg-sky-400/10 border border-sky-400/20 px-3.5 py-1.5 rounded-full">
             Histórias de Sucesso
           </span>
@@ -55,7 +61,7 @@ export default function Testimonials() {
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
             A maior prova da nossa dedicação está na felicidade e na melhoria direta da qualidade de vida dos nossos pacientes em Capitão Poço.
           </p>
-        </div>
+        </motion.div>
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -106,7 +112,7 @@ export default function Testimonials() {
                     )}
                   </div>
                   <p className="text-xs text-slate-400 font-medium">
-                    {rev.location} • {rev.role}
+                    {rev.location}{rev.role ? ` • ${rev.role}` : ''}
                   </p>
                 </div>
               </div>
@@ -115,7 +121,13 @@ export default function Testimonials() {
         </div>
 
         {/* Quality Guarantee Callout */}
-        <div className="mt-16 p-6 sm:p-8 rounded-3xl bg-slate-900/30 border border-white/10 max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-6 text-left">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-16 p-6 sm:p-8 rounded-3xl bg-slate-900/30 border border-white/10 max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-6 text-left"
+        >
           <div className="w-16 h-16 rounded-2xl bg-sky-400 text-slate-950 flex items-center justify-center shrink-0 shadow-lg shadow-sky-400/15">
             <Star className="w-8 h-8 fill-slate-950 text-slate-950" />
           </div>
@@ -127,7 +139,7 @@ export default function Testimonials() {
               Todos os relatos acima representam resultados reais de pessoas de Capitão Poço que passaram por avaliações rigorosas e receberam cuidados individualizados. Cada organismo é único e seu plano cirúrgico será construído sob medida para você.
             </p>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

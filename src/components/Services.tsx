@@ -62,7 +62,13 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-20">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto space-y-4 mb-20"
+        >
           <span className="text-sky-400 font-bold tracking-widest text-xs uppercase bg-sky-400/10 border border-sky-400/20 px-3.5 py-1.5 rounded-full">
             Especialidades & Tecnologia
           </span>
@@ -72,7 +78,7 @@ export default function Services() {
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
             Trabalhamos com os melhores materiais do mercado de reabilitação bucal para entregar longevidade, segurança e dentes que parecem 100% naturais.
           </p>
-        </div>
+        </motion.div>
 
         {/* Treatments Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
@@ -110,7 +116,13 @@ export default function Services() {
         </div>
 
         {/* Step-by-Step Journey Card */}
-        <div className="bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden text-left border border-white/10">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden text-left border border-white/10"
+        >
           
           {/* Background effect */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/5 rounded-full blur-3xl -z-0" />
@@ -161,7 +173,7 @@ export default function Services() {
             </div>
 
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>
